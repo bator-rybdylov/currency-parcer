@@ -1,0 +1,16 @@
+.info_container {
+    margin: 50px;
+    text-align: center;
+}
+
+#currency_source_name_container {
+    margin: 25px 0;
+}
+
+.currency_row {
+    margin: 10px 0;
+}
+
+.currency_rate {
+    margin: 0 0 0 20px;
+}

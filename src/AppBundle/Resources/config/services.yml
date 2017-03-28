@@ -1,0 +1,4 @@
+services:
+    currency_parser:
+        class: AppBundle\Service\CurrencyParser
+        arguments: ["@doctrine.orm.entity_manager"]

@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="info_container">
+        <div id="currency_source_name_container">Источник: <span id="currency_source_name">{{ currency_source_name }}</span></div>
+
+        <div id="currency_container" data-request_url="{{ path('update_currencies') }}">
+            {% for currency_code, rate in currency_rates %}
+                <div class="currency_row">
+                    <span id="currency_code_{{ currency_code }}">{{ currency_code }}</span>:
+                    <span class="currency_rate" id="currency_rate_{{ currency_code }}">{{ rate }}</span> RUB
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock body %}
+
+{% block javascripts %}
+    <script src="{{ asset('bundles/app/script.js') }}"></script>
+{% endblock javascripts %}
