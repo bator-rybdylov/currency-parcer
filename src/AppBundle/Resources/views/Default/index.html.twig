@@ -2,7 +2,7 @@
 
 {% block body %}
     <div class="info_container">
-        <div id="currency_source_name_container">Источник: <span id="currency_source_name">{{ currency_source_name }}</span></div>
+        <div id="currency_source_name_container">Currency info source: <span id="currency_source_name">{{ currency_source_name }}</span></div>
 
         <div id="currency_container" data-request_url="{{ path('update_currencies') }}">
             {% for currency_code, rate in currency_rates %}

@@ -2,6 +2,7 @@
 
 namespace AppBundle\Service;
 
+use AppBundle\Entity\CurrencySource;
 use Doctrine\ORM\EntityManager;
 
 class CurrencyParser
@@ -34,6 +35,7 @@ class CurrencyParser
                 array('priority' => 'ASC')
             );
 
+        /** @var CurrencySource $source */
         foreach ($currency_sources_list as $source) {
             // Send request to API
             $response = $this->sendRequest($source->getUrl());
